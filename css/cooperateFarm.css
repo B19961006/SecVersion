@@ -16,60 +16,87 @@ a::after {
     color: black;
 }
 
-.head a {
-    color: white;
-}
-
 /* nav */
 
 .nav {
-    position: absolute;
-    width: 1000px;
-    left: 30%;
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
     color: black;
+}
+
+.head {
+    width: 100%;
 }
 
 .circle {
     float: left;
-}
-
-.big-circle {
-    z-index: 9;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: white;
-}
-
-.middle-circle {
     position: absolute;
-    left: 25px;
-    top: 25px;
-    z-index: 99;
+    top: 100px;
+    left: 0px;
+}
+
+.circle2 {
+    position: absolute;
+    top: 150px;
+    left: 300px;
+}
+
+.circle3 {
+    position: absolute;
+    top: 100px;
+    left: 600px;
+}
+
+.circle4 {
+    position: absolute;
+    top: 150px;
+    left: 900px;
+}
+
+.big-circle,
+.middle-circle,
+.center-circle {
     width: 150px;
     height: 150px;
+    position: absolute;
+    top: 50px;
     border-radius: 50%;
-    background: black;
+    background: white;
 }
 
 .center-circle {
-    z-index: 1000;
-    position: absolute;
-    left: 50px;
-    top: 50px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: white;
     text-align: center;
-    line-height: 100px;
+    line-height: 150px;
+    font-size: 2em;
 }
 
-.word {
-    z-index: 10000;
-    position: absolute;
-    left: 85px;
-    top: 85px;
+.big-circle {
+    animation: bigani 2s infinite;
+}
+
+.middle-circle {
+    animation: midani 2s infinite;
+}
+
+@keyframes bigani {
+    from {
+        background: rgba(255, 255, 255, 1)
+    }
+    to {
+        background: rgba(160, 160, 160, 0);
+        transform: scale(2);
+    }
+}
+
+@keyframes midani {
+    from {
+        background: rgba(255, 255, 255, 1)
+    }
+    to {
+        background: rgba(160, 160, 160, 0);
+        transform: scale(2);
+    }
 }
 
 .backImg img {
@@ -94,7 +121,7 @@ a::after {
 }
 
 .disc {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .line {
@@ -113,7 +140,7 @@ a::after {
     height: 320.391px;
     width: 60%;
     float: left;
-    display: -webkit-box;
+    /* display: -webkit-box; */
     box-orient: vertical;
     /* 限制行数 */
     line-clamp: 9;
@@ -145,23 +172,31 @@ a::after {
     width: 100%;
 }
 
-.farm-lunbo {
-    margin-top: 40px;
+.travel {
     width: 100%;
-    height: 620px;
-    background-color: lightblue;
-    background-image: url(../img/s5.jpg);
-    background-size: 100% 100%;
 }
 
-.farm-lunbo-img {
-    margin: 0 auto;
-    position: relative;
-    width: 700px;
-    height: 370px;
-    background: thistle;
-    top: 125px;
-    opacity: 0.7;
+.travel-title {
+    text-align: center;
+    font-size: 1.2em;
+    color: #0d3172;
+}
+
+.travel-img {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(rgba(76, 76, 76, 0), rgb(18, 18, 18)), url(../img/gulou-slider0.JPG) center center no-repeat fixed;
+}
+
+.travel-li {
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    /* background: red; */
+}
+
+#demo-slider-0 {
+    padding-top: 23px;
 }
 
 .func {
